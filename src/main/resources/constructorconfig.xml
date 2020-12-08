@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.springcore.constructorinjection.Student" name="student">
+        <constructor-arg>
+            <value type="int">10</value>
+        </constructor-arg>
+        <constructor-arg>
+            <value type="java.lang.String">Mohit</value>
+        </constructor-arg>
+        <constructor-arg>
+            <value type="java.lang.String">Rajkot</value>
+        </constructor-arg>
+    </bean>
+    <bean class="com.springcore.constructorinjection.ref.Address" name="address">
+
+        <constructor-arg value="Rajkot"/>
+    </bean>
+    <bean class="com.springcore.constructorinjection.ref.Student" name="student2">
+
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="Mohit"/>
+        <constructor-arg index="2" ref="address"/>
+    </bean>
+    <bean class="com.springcore.constructorinjection.collections.Collections" name="collections">
+        <constructor-arg index="0">
+            <list>
+                <value>Mohit</value>
+                <value>Uday</value>
+                <value>Aaditya</value>
+                <value>Annirudh</value>
+                <value>Nilesh</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <set>
+                <value>Rajkot</value>
+                <value>Jamnagar</value>
+                <value>Porbandar</value>
+                <value>Ahmedabad</value>
+                <value>Baroda</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <map>
+                <entry key="1" value="Java"/>
+                <entry key="2" value="python"/>
+                <entry key="3" value="html"/>
+                <entry key="4" value="bootstrap"/>
+                <entry key="5" value="angular"/>
+            </map>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <props>
+                <prop key="Mohit">9856854152</prop>
+                <prop key="Uday">9563215478</prop>
+                <prop key="Aaditya">6352486542</prop>
+                <prop key="Annirudh">7852456987</prop>
+                <prop key="Nilesh">9654782365</prop>
+            </props>
+        </constructor-arg>
+    </bean>
+
+
+</beans>

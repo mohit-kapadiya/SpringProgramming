@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean class="com.springcore.refrences.Address" name="address">
+        <property name="city" value="Rajkot"></property>
+    </bean>
+    <bean class="com.springcore.refrences.Employee" name="employee">
+        <property name="name" value="mohit"></property>
+        <property name="address">
+            <ref bean="address"></ref>
+        </property>
+    </bean>
+
+    <bean class="com.springcore.refrences.ref2.Address" name="address2">
+        <property name="city" value="Rajkot"></property>
+    </bean>
+    <bean class="com.springcore.refrences.ref2.Employee" name="employee2">
+        <property name="address" ref="address2"></property>
+        <property name="id" value="1"></property>
+    </bean>
+
+    <bean class="com.springcore.refrences.map.Subject" name="subject">
+        <property name="name">
+            <value>os</value>
+        </property>
+    </bean>
+    <bean class="com.springcore.refrences.map.Student" name="student">
+        <property name="name" value="mohit"></property>
+        <property name="map">
+            <map>
+                <entry key-ref="subject" value-ref="city"></entry>
+            </map>
+        </property>
+    </bean>
+    <bean class="com.springcore.refrences.map.City" name="city">
+        <property name="city" value="Ahmedabad"></property>
+    </bean>
+
+
+</beans>
