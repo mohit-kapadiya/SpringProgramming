@@ -1,4 +1,4 @@
-package com.springcore.collections;
+package com.springcore.setterinjection.collections;
 
 import java.util.*;
 

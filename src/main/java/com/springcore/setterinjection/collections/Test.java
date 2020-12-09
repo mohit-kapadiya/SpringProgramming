@@ -1,4 +1,4 @@
-package com.springcore.collections;
+package com.springcore.setterinjection.collections;
 
 import org.apache.log4j.Logger;
 import org.springframework.context.ApplicationContext;
