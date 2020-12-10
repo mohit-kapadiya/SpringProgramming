@@ -30,9 +30,9 @@ public class Student {
         Set<Map.Entry<Subject,City>> set=map.entrySet();
         Iterator<Map.Entry<Subject,City>> iterator=set.iterator();
         while(iterator.hasNext()){
-            Map.Entry<Subject,City> map=iterator.next();
-            Subject subject=map.getKey();
-            City city=map.getValue();
+            Map.Entry<Subject,City> entry=iterator.next();
+            Subject subject=entry.getKey();
+            City city=entry.getValue();
             logger.info("subject info ");
             logger.info(subject);
             logger.info("city info");
