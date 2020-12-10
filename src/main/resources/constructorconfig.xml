@@ -58,7 +58,31 @@
                 <prop key="Aaditya">6352486542</prop>
                 <prop key="Annirudh">7852456987</prop>
                 <prop key="Nilesh">9654782365</prop>
-            </props>
+            </props>Nataraja Gootoor
+        </constructor-arg>
+    </bean>
+    <bean class="com.springcore.constructorinjection.collections.collections2.Answer" name="answer">
+        <constructor-arg value="Java is the best programming languages"/>
+    </bean>
+    <bean class="com.springcore.constructorinjection.collections.collections2.Answer" name="answer2">
+        <constructor-arg value="Java is the best object oriented programming languages"/>
+    </bean>
+    <bean class="com.springcore.constructorinjection.collections.collections2.Answer" name="answer3">
+        <constructor-arg value="Java is the secure languages"/>
+    </bean>
+    <bean class="com.springcore.constructorinjection.collections.collections2.User" name="user">
+        <constructor-arg value="Mohit"/>
+    </bean>
+    <bean class="com.springcore.constructorinjection.collections.collections2.Question" name="question">
+
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="what is java?"/>
+        <constructor-arg index="2">
+            <map>
+                <entry key-ref="answer" value-ref="user"/>
+                <entry key-ref="answer2" value-ref="user"/>
+                <entry key-ref="answer3" value-ref="user"/>
+            </map>
         </constructor-arg>
     </bean>
 

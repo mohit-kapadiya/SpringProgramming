@@ -11,7 +11,7 @@
         <property name="name"><value>Rajkot</value></property>
     </bean>
 
-    <bean class="com.springcore.collections.CollectionsType" name="collections">
+    <bean class="com.springcore.setterinjection.collections.CollectionsType" name="collections">
         <property name="id">
             <list>
                 <value>1</value>
@@ -45,6 +45,21 @@
                 <prop key="name">Mohit</prop>
                 <prop key="city">jetpur</prop>
             </props>
+        </property>
+    </bean>
+    
+    <bean class="com.springcore.parent.Employee" name="employee">
+        <property name="name" value="Mohit"/>
+        <property name="address">
+            <ref bean="address"></ref>
+        </property>
+    </bean>
+    <bean class="com.springcore.parent.Address" name="address" >
+        <property name="city" value="Rajkot"></property>
+    </bean>
+    <bean name="employee2" class="com.springcore.parent.Employee" parent="employee">
+        <property name="address">
+            <ref bean="address"></ref>
         </property>
     </bean>
 
