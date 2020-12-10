@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <bean class="com.springcore.lifecycle.usingxml.Lifecycle" name="lifecycle" init-method="init" destroy-method="destroy">
+        <property name="name" value="mohit"></property>
+    </bean>
+
+    <bean class="com.springcore.lifecycle.usinginterface.Employee" name="employee">
+        <property name="name" value="Mohit"></property>
+    </bean>
+    <bean class="com.springcore.lifecycle.usingannotations.User" name="user">
+        <property name="city" value="Rajkot" ></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <bean class="com.springcore.autowired.byname.Student" name="student" autowire="byName">
+        <property name="name" value="Mohit kapadiya"></property>
+        <property name="id" value="1"></property>
+    </bean>
+
+    <bean class="com.springcore.autowired.byname.City" name="city">
+        <property name="cityName" value="Jetpur"></property>
+    </bean>
+
+    <bean class="com.springcore.autowired.bytype.Id" name="id">
+        <property name="id" value="1"></property>
+    </bean>
+
+    <bean class="com.springcore.autowired.bytype.User" name="user" autowire="byType">
+        <property name="name" value="Mohit"></property>
+    </bean>
+    <bean class="com.springcore.autowired.byconstructor.Id" name="id1">
+        <constructor-arg value="1"/>
+    </bean>
+    <bean class="com.springcore.autowired.byconstructor.User" name="user1" autowire="constructor">
+        <constructor-arg value="Mohit"></constructor-arg>
+
+    </bean>
+
+    <bean class="com.springcore.autowired.autowireannotation.Student" name="student2">
+        <property name="name" value="Mohit"></property>
+        <property name="id" value="20"></property>
+    </bean>
+
+    <bean class="com.springcore.autowired.autowireannotation.RollNo" name="rollNo">
+        <property name="rollNo" value="124"></property>
+    </bean>
+
+</beans>
